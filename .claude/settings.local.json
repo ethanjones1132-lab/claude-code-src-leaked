@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls /Users/shreyanbr/Downloads/claude-code-src/*.json)",
+      "Bash(find /Users/shreyanbr/Downloads/claude-code-src -maxdepth 1 -name *.json -o -name *.toml -o -name *.yaml -o -name *.yml -o -name tsconfig* -o -name bun*)",
+      "Bash(find /Users/shreyanbr/Downloads/claude-code-src -name tsconfig* -o -name bun.lockb -o -name bunfig*)",
+      "Bash(find /Users/shreyanbr/Downloads/claude-code-src -name *.json)",
+      "Bash(bun --version)",
+      "Bash(grep -v \"^fs$\\\\|^fs/\")",
+      "Bash(grep -v \"^path$\\\\|^path/\")",
+      "Bash(grep -v \"^os$\")",
+      "Bash(grep -v \"^crypto$\\\\|^crypto/\")",
+      "Bash(grep -v \"^child_process$\")",
+      "Bash(grep -v \"^util$\\\\|^util/\")",
+      "Bash(grep -v \"^stream$\\\\|^stream/\")",
+      "Bash(grep -v \"^events$\")",
+      "Bash(grep -v \"^net$\")",
+      "Bash(grep -v \"^http$\\\\|^https$\")",
+      "Bash(grep -v \"^url$\")",
+      "Bash(grep -v \"^readline$\")",
+      "Bash(grep -v \"^assert$\")",
+      "Bash(grep -v \"^tty$\")",
+      "Bash(grep -v \"^buffer$\\\\|^buffer/\")",
+      "Bash(grep -v \"^process$\")",
+      "Bash(grep -v \"^module$\")",
+      "Bash(grep -v \"^perf_hooks$\")",
+      "Bash(grep -v \"^v8$\")",
+      "Bash(grep -v \"^dns$\\\\|^async_hooks$\")",
+      "Bash(npm view:*)",
+      "Read(//private/tmp/**)",
+      "Bash(tar -xzf anthropic-ai-claude-code-2.1.87.tgz)",
+      "Bash(claude --version)",
+      "Bash(gh auth:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}
