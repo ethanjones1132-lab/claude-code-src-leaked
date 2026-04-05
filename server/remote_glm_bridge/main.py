@@ -5,7 +5,7 @@ import json
 from typing import Annotated
 from uuid import uuid4
 
-from fastapi import Depends, FastAPI, Header, HTTPException, Request, WebSocket, WebSocketDisconnect, status
+from fastapi import Depends, FastAPI, Header, HTTPException, Request, Response, WebSocket, WebSocketDisconnect, status
 from fastapi.responses import JSONResponse, StreamingResponse
 
 from .config import load_settings
@@ -372,8 +372,8 @@ async def healthz() -> JSONResponse:
     )
 
 
-@app.post("/v1/messages", dependencies=[Depends(require_auth)])
-async def create_compat_message(request: Request) -> JSONResponse | StreamingResponse:
+@app.post("/v1/messages", dependencies=[Depends(require_auth)], response_model=None)
+async def create_compat_message(request: Request) -> Response:
     try:
         payload = await request.json()
     except Exception:
